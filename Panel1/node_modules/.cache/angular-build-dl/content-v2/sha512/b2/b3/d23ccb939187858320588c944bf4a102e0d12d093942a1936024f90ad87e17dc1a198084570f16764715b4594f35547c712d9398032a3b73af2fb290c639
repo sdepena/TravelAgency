@@ -1,1 +1,0 @@
-(self.webpackChunktravelagencyangular=self.webpackChunktravelagencyangular||[]).push([[930],{88930:function(e,n,t){"use strict";t.r(n),t.d(n,{gx_query_viewer_element_format:function(){return r}});var a=t(46841);const r=class{constructor(e){(0,a.r)(this,e),this.elementChanged=(0,a.c)(this,"elementChanged",7)}componentDidUpdate(){this.elementChanged.emit()}}}}]);
