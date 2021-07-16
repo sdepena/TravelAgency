@@ -1,0 +1,5809 @@
+@import  "../../node_modules/@genexus/web-controls-library/dist/theming/theming-mixins";
+@import  "./common";
+
+%BaseSwitch {
+}
+
+%CustomVars_Switch {
+}
+
+.Switch {
+	// No mixin available for this class at the moment
+	@extend %BaseSwitch !optional;
+
+	@extend %CustomVars_Switch !optional;
+}
+
+
+%BaseApplication {
+	background-size: 100% 100%;
+
+
+
+}
+
+%CustomVars_Application {
+--image-loading-indicator: none;
+
+}
+
+.Application {
+	@include gx-application( 
+		$class: "%BaseApplication"
+	);
+	@extend %CustomVars_Application !optional;
+}
+
+
+%BaseApplicationBars {
+}
+
+%CustomVars_ApplicationBars {
+--gx-navbar-icon-color: var(--action-tint-color);
+}
+
+.ApplicationBars {
+	@include gx-application-bar( 
+		$class: "%BaseApplicationBars"
+	);
+	@extend %CustomVars_ApplicationBars !optional;
+}
+
+%BaseApplicationBarsHeaderRow {
+	@extend %BaseApplicationBars !optional;
+
+}
+
+%CustomVars_ApplicationBarsHeaderRow {
+--gx-navbar-icon-color: var(--action-tint-color);
+}
+
+.ApplicationBarsHeaderRow {
+	@extend %CustomVars_ApplicationBars !optional;
+	@include gx-application-bar( 
+		$class: "%BaseApplicationBarsHeaderRow"
+	);
+	@extend %CustomVars_ApplicationBarsHeaderRow !optional;
+}
+
+
+%BaseSketchApplicationBars {
+	@extend %BaseApplicationBars !optional;
+
+}
+
+%CustomVars_SketchApplicationBars {
+--gx-navbar-icon-color: var(--action-tint-color);
+}
+
+.SketchApplicationBars {
+	@extend %CustomVars_ApplicationBars !optional;
+	@include gx-application-bar( 
+		$class: "%BaseSketchApplicationBars"
+	);
+	@extend %CustomVars_SketchApplicationBars !optional;
+}
+
+
+
+%BaseAnimation {
+}
+
+%CustomVars_Animation {
+}
+
+.Animation {
+	// No mixin available for this class at the moment
+	@extend %BaseAnimation !optional;
+
+	@extend %CustomVars_Animation !optional;
+}
+
+
+%BaseForm {
+	enter-effect: gx_default;
+
+
+	close-effect: gx_default;
+
+
+	call-type: gx_default;
+
+
+	target-size: gx_default;
+
+
+	target-width: 100%;
+
+
+	target-height: 100%;
+
+
+	content-size-change: gx_default;
+
+
+	input-view-appearance: gx_default;
+
+
+
+}
+
+%CustomVars_Form {
+}
+
+.Form {
+	// No mixin available for this class at the moment
+	@extend %BaseForm !optional;
+
+	@extend %CustomVars_Form !optional;
+}
+
+%BaseSketchForm {
+	@extend %BaseForm !optional;
+	enter-effect: gx_default;
+
+
+	close-effect: gx_default;
+
+
+	call-type: gx_default;
+
+
+	target-size: gx_default;
+
+
+
+}
+
+%CustomVars_SketchForm {
+}
+
+.SketchForm {
+	@extend %CustomVars_Form !optional;
+	// No mixin available for this class at the moment
+	@extend %BaseSketchForm !optional;
+
+	@extend %CustomVars_SketchForm !optional;
+}
+
+
+
+%BaseAttribute {
+}
+
+%CustomVars_Attribute {
+}
+
+.Attribute {
+	@include gx-form-field( 
+		$class: "%BaseAttribute", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attribute !optional;
+}
+
+%BaseAttributeTitle {
+	@extend %BaseAttribute !optional;
+
+}
+
+%CustomVars_AttributeTitle {
+}
+
+.AttributeTitle {
+	@extend %CustomVars_Attribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttributeTitle", 
+		$label: ".TextBlockTitle"
+
+	);
+	@extend %CustomVars_AttributeTitle !optional;
+}
+
+
+%BaseAttributeSubtitle {
+	@extend %BaseAttribute !optional;
+
+}
+
+%CustomVars_AttributeSubtitle {
+}
+
+.AttributeSubtitle {
+	@extend %CustomVars_Attribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttributeSubtitle", 
+		$label: ".TextBlockSubtitle"
+
+	);
+	@extend %CustomVars_AttributeSubtitle !optional;
+}
+
+
+%BaseAttributeReadOnly {
+	@extend %BaseAttribute !optional;
+
+}
+
+%CustomVars_AttributeReadOnly {
+}
+
+.AttributeReadOnly {
+	@extend %CustomVars_Attribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttributeReadOnly", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_AttributeReadOnly !optional;
+}
+
+
+%BaseLinkAttribute {
+	@extend %BaseAttribute !optional;
+
+}
+
+%CustomVars_LinkAttribute {
+}
+
+.LinkAttribute {
+	@extend %CustomVars_Attribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseLinkAttribute", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_LinkAttribute !optional;
+}
+
+
+%BaseSketchAttribute {
+	@extend %BaseAttribute !optional;
+	color: #000000;
+
+
+
+}
+
+%CustomVars_SketchAttribute {
+}
+
+.SketchAttribute {
+	@extend %CustomVars_Attribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseSketchAttribute", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_SketchAttribute !optional;
+}
+
+%BaseSketchAttributeWithType {
+	@extend %BaseSketchAttribute !optional;
+	color: #00CCCC;
+
+
+
+}
+
+%CustomVars_SketchAttributeWithType {
+}
+
+.SketchAttributeWithType {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseSketchAttributeWithType", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_SketchAttributeWithType !optional;
+}
+
+
+%BaseAttraction_rating {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Graphik-Semibold;
+
+
+	font-size: 12px;
+
+
+	color: #9E9E9E;
+
+
+
+}
+
+%CustomVars_Attraction_rating {
+}
+
+.Attraction_rating {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_rating", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_rating !optional;
+}
+
+%BaseAttraction_ratingMargin_2_0_2_0 {
+	@extend %BaseAttraction_rating !optional;
+
+}
+
+%CustomVars_Attraction_ratingMargin_2_0_2_0 {
+--margin-top: 2px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.Attraction_ratingMargin_2_0_2_0 {
+	@extend %CustomVars_Attraction_rating !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_ratingMargin_2_0_2_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_ratingMargin_2_0_2_0 !optional;
+}
+
+
+
+%BaseAttraction_location {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Attraction_location {
+}
+
+.Attraction_location {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_location", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_location !optional;
+}
+
+
+%BaseAttraction_name {
+	@extend %BaseSketchAttribute !optional;
+	font-family: AbhayaLibre-SemiBold;
+
+
+	font-size: 24px;
+
+
+
+}
+
+%CustomVars_Attraction_name {
+}
+
+.Attraction_name {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_name", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_name !optional;
+}
+
+%BaseAttraction_nameMargin_11_0_4_0 {
+	@extend %BaseAttraction_name !optional;
+
+}
+
+%CustomVars_Attraction_nameMargin_11_0_4_0 {
+--margin-top: 11px;--margin-right: 0px;--margin-bottom: 4px;--margin-left: 0px;
+}
+
+.Attraction_nameMargin_11_0_4_0 {
+	@extend %CustomVars_Attraction_name !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_nameMargin_11_0_4_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_nameMargin_11_0_4_0 !optional;
+}
+
+
+
+%BaseAttraction_rating1 {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Graphik-Semibold;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Attraction_rating1 {
+}
+
+.Attraction_rating1 {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_rating1", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_rating1 !optional;
+}
+
+%BaseAttraction_rating1Margin_1_0_1_0 {
+	@extend %BaseAttraction_rating1 !optional;
+
+}
+
+%CustomVars_Attraction_rating1Margin_1_0_1_0 {
+--margin-top: 1px;--margin-right: 0px;--margin-bottom: 1px;--margin-left: 0px;
+}
+
+.Attraction_rating1Margin_1_0_1_0 {
+	@extend %CustomVars_Attraction_rating1 !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_rating1Margin_1_0_1_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_rating1Margin_1_0_1_0 !optional;
+}
+
+
+
+%BaseAttraction_location1 {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Attraction_location1 {
+}
+
+.Attraction_location1 {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_location1", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_location1 !optional;
+}
+
+
+%BaseAttraction_name1 {
+	@extend %BaseSketchAttribute !optional;
+	font-family: AbhayaLibre-SemiBold;
+
+
+	font-size: 40px;
+
+
+	color: #FEFFFF;
+
+
+
+}
+
+%CustomVars_Attraction_name1 {
+}
+
+.Attraction_name1 {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_name1", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_name1 !optional;
+}
+
+%BaseAttraction_name1Margin_0_0_8_0 {
+	@extend %BaseAttraction_name1 !optional;
+
+}
+
+%CustomVars_Attraction_name1Margin_0_0_8_0 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 8px;--margin-left: 0px;
+}
+
+.Attraction_name1Margin_0_0_8_0 {
+	@extend %CustomVars_Attraction_name1 !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_name1Margin_0_0_8_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_name1Margin_0_0_8_0 !optional;
+}
+
+
+
+%BaseAbout {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #E21710;
+
+
+
+}
+
+%CustomVars_About {
+}
+
+.About {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAbout", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_About !optional;
+}
+
+%BaseAboutMargin_0_0_2_0 {
+	@extend %BaseAbout !optional;
+
+}
+
+%CustomVars_AboutMargin_0_0_2_0 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.AboutMargin_0_0_2_0 {
+	@extend %CustomVars_About !optional;
+	@include gx-form-field( 
+		$class: "%BaseAboutMargin_0_0_2_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_AboutMargin_0_0_2_0 !optional;
+}
+
+
+%BaseAboutMargin_0_0_2_01 {
+	@extend %BaseAbout !optional;
+
+}
+
+%CustomVars_AboutMargin_0_0_2_01 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.AboutMargin_0_0_2_01 {
+	@extend %CustomVars_About !optional;
+	@include gx-form-field( 
+		$class: "%BaseAboutMargin_0_0_2_01", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_AboutMargin_0_0_2_01 !optional;
+}
+
+
+
+%BaseDates {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Dates {
+}
+
+.Dates {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseDates", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Dates !optional;
+}
+
+%BaseDatesMargin_0_0_2_0 {
+	@extend %BaseDates !optional;
+
+}
+
+%CustomVars_DatesMargin_0_0_2_0 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.DatesMargin_0_0_2_0 {
+	@extend %CustomVars_Dates !optional;
+	@include gx-form-field( 
+		$class: "%BaseDatesMargin_0_0_2_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_DatesMargin_0_0_2_0 !optional;
+}
+
+
+%BaseDatesMargin_0_0_2_01 {
+	@extend %BaseDates !optional;
+
+}
+
+%CustomVars_DatesMargin_0_0_2_01 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.DatesMargin_0_0_2_01 {
+	@extend %CustomVars_Dates !optional;
+	@include gx-form-field( 
+		$class: "%BaseDatesMargin_0_0_2_01", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_DatesMargin_0_0_2_01 !optional;
+}
+
+
+
+%BasePricing {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Pricing {
+}
+
+.Pricing {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BasePricing", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Pricing !optional;
+}
+
+%BasePricingMargin_0_0_2_0 {
+	@extend %BasePricing !optional;
+
+}
+
+%CustomVars_PricingMargin_0_0_2_0 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.PricingMargin_0_0_2_0 {
+	@extend %CustomVars_Pricing !optional;
+	@include gx-form-field( 
+		$class: "%BasePricingMargin_0_0_2_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_PricingMargin_0_0_2_0 !optional;
+}
+
+
+%BasePricingMargin_0_0_2_01 {
+	@extend %BasePricing !optional;
+
+}
+
+%CustomVars_PricingMargin_0_0_2_01 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.PricingMargin_0_0_2_01 {
+	@extend %CustomVars_Pricing !optional;
+	@include gx-form-field( 
+		$class: "%BasePricingMargin_0_0_2_01", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_PricingMargin_0_0_2_01 !optional;
+}
+
+
+
+%BaseDirections {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Directions {
+}
+
+.Directions {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseDirections", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Directions !optional;
+}
+
+%BaseDirectionsMargin_0_0_2_0 {
+	@extend %BaseDirections !optional;
+
+}
+
+%CustomVars_DirectionsMargin_0_0_2_0 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.DirectionsMargin_0_0_2_0 {
+	@extend %CustomVars_Directions !optional;
+	@include gx-form-field( 
+		$class: "%BaseDirectionsMargin_0_0_2_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_DirectionsMargin_0_0_2_0 !optional;
+}
+
+
+%BaseDirectionsMargin_0_0_2_01 {
+	@extend %BaseDirections !optional;
+
+}
+
+%CustomVars_DirectionsMargin_0_0_2_01 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.DirectionsMargin_0_0_2_01 {
+	@extend %CustomVars_Directions !optional;
+	@include gx-form-field( 
+		$class: "%BaseDirectionsMargin_0_0_2_01", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_DirectionsMargin_0_0_2_01 !optional;
+}
+
+
+
+%BaseBus_data {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Lora-Regular;
+
+
+	font-size: 16px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Bus_data {
+}
+
+.Bus_data {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseBus_data", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Bus_data !optional;
+}
+
+
+%BaseBus {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Lora-Bold;
+
+
+	font-size: 16px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Bus {
+}
+
+.Bus {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseBus", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Bus !optional;
+}
+
+
+%BaseMetro_data {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Lora-Regular;
+
+
+	font-size: 16px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Metro_data {
+}
+
+.Metro_data {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseMetro_data", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Metro_data !optional;
+}
+
+%BaseMetro_dataMargin_0_0_3_0 {
+	@extend %BaseMetro_data !optional;
+
+}
+
+%CustomVars_Metro_dataMargin_0_0_3_0 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 3px;--margin-left: 0px;
+}
+
+.Metro_dataMargin_0_0_3_0 {
+	@extend %CustomVars_Metro_data !optional;
+	@include gx-form-field( 
+		$class: "%BaseMetro_dataMargin_0_0_3_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Metro_dataMargin_0_0_3_0 !optional;
+}
+
+
+
+%BaseMetro {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Lora-Bold;
+
+
+	font-size: 16px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Metro {
+}
+
+.Metro {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseMetro", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Metro !optional;
+}
+
+
+%BaseAddress_data {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Lora-Regular;
+
+
+	font-size: 16px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Address_data {
+}
+
+.Address_data {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAddress_data", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Address_data !optional;
+}
+
+%BaseAddress_dataMargin_0_0_3_0 {
+	@extend %BaseAddress_data !optional;
+
+}
+
+%CustomVars_Address_dataMargin_0_0_3_0 {
+--margin-top: 0px;--margin-right: 0px;--margin-bottom: 3px;--margin-left: 0px;
+}
+
+.Address_dataMargin_0_0_3_0 {
+	@extend %CustomVars_Address_data !optional;
+	@include gx-form-field( 
+		$class: "%BaseAddress_dataMargin_0_0_3_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Address_dataMargin_0_0_3_0 !optional;
+}
+
+
+
+%BaseLouvre_Museum {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Lora-Bold;
+
+
+	font-size: 16px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Louvre_Museum {
+}
+
+.Louvre_Museum {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseLouvre_Museum", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Louvre_Museum !optional;
+}
+
+
+%BaseAttraction_title {
+	@extend %BaseSketchAttribute !optional;
+	font-family: AbhayaLibre-Bold;
+
+
+	font-size: 40px;
+
+
+	color: #111111;
+
+
+
+}
+
+%CustomVars_Attraction_title {
+}
+
+.Attraction_title {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_title", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_title !optional;
+}
+
+%BaseAttraction_titleMargin_28_0_22_0 {
+	@extend %BaseAttraction_title !optional;
+
+}
+
+%CustomVars_Attraction_titleMargin_28_0_22_0 {
+--margin-top: 28px;--margin-right: 0px;--margin-bottom: 22px;--margin-left: 0px;
+}
+
+.Attraction_titleMargin_28_0_22_0 {
+	@extend %CustomVars_Attraction_title !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_titleMargin_28_0_22_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_titleMargin_28_0_22_0 !optional;
+}
+
+
+
+%BaseAttraction_name2 {
+	@extend %BaseSketchAttribute !optional;
+	font-family: AbhayaLibre-SemiBold;
+
+
+	font-size: 60px;
+
+
+	color: #FEFFFF;
+
+
+
+}
+
+%CustomVars_Attraction_name2 {
+}
+
+.Attraction_name2 {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_name2", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_name2 !optional;
+}
+
+
+%BaseThe_museum_packs_30_ {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Lora-Regular;
+
+
+	font-size: 18px;
+
+
+	color: #3C3F3F;
+
+
+
+}
+
+%CustomVars_The_museum_packs_30_ {
+}
+
+.The_museum_packs_30_ {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseThe_museum_packs_30_", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_The_museum_packs_30_ !optional;
+}
+
+
+%BaseVisit_the_palace_of {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Lora-Regular;
+
+
+	font-size: 18px;
+
+
+	color: #3C3F3F;
+
+
+
+}
+
+%CustomVars_Visit_the_palace_of {
+}
+
+.Visit_the_palace_of {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseVisit_the_palace_of", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Visit_the_palace_of !optional;
+}
+
+
+%BaseAttraction_title1 {
+	@extend %BaseSketchAttribute !optional;
+	font-family: AbhayaLibre-Bold;
+
+
+	font-size: 40px;
+
+
+	color: #111111;
+
+
+
+}
+
+%CustomVars_Attraction_title1 {
+}
+
+.Attraction_title1 {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_title1", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_title1 !optional;
+}
+
+%BaseAttraction_title1Margin_28_0_22_0 {
+	@extend %BaseAttraction_title1 !optional;
+
+}
+
+%CustomVars_Attraction_title1Margin_28_0_22_0 {
+--margin-top: 28px;--margin-right: 0px;--margin-bottom: 22px;--margin-left: 0px;
+}
+
+.Attraction_title1Margin_28_0_22_0 {
+	@extend %CustomVars_Attraction_title1 !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_title1Margin_28_0_22_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_title1Margin_28_0_22_0 !optional;
+}
+
+
+
+%BaseAttraction_name3 {
+	@extend %BaseSketchAttribute !optional;
+	font-family: AbhayaLibre-SemiBold;
+
+
+	font-size: 60px;
+
+
+	color: #FEFFFF;
+
+
+
+}
+
+%CustomVars_Attraction_name3 {
+}
+
+.Attraction_name3 {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttraction_name3", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attraction_name3 !optional;
+}
+
+
+%BaseLet_us_help_you_plan {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Graphik-Semibold;
+
+
+	font-size: 24px;
+
+
+	color: #BABABA;
+
+
+
+}
+
+%CustomVars_Let_us_help_you_plan {
+}
+
+.Let_us_help_you_plan {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseLet_us_help_you_plan", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Let_us_help_you_plan !optional;
+}
+
+%BaseLet_us_help_you_planMargin_16_0_16_0 {
+	@extend %BaseLet_us_help_you_plan !optional;
+
+}
+
+%CustomVars_Let_us_help_you_planMargin_16_0_16_0 {
+--margin-top: 16px;--margin-right: 0px;--margin-bottom: 16px;--margin-left: 0px;
+}
+
+.Let_us_help_you_planMargin_16_0_16_0 {
+	@extend %CustomVars_Let_us_help_you_plan !optional;
+	@include gx-form-field( 
+		$class: "%BaseLet_us_help_you_planMargin_16_0_16_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Let_us_help_you_planMargin_16_0_16_0 !optional;
+}
+
+
+
+%BasePOPULAR_ATTRACTIONS {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #E21710;
+
+
+
+}
+
+%CustomVars_POPULAR_ATTRACTIONS {
+}
+
+.POPULAR_ATTRACTIONS {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BasePOPULAR_ATTRACTIONS", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_POPULAR_ATTRACTIONS !optional;
+}
+
+
+%BaseAttractions_tag {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 13px;
+
+
+	color: #E21710;
+
+
+
+}
+
+%CustomVars_Attractions_tag {
+}
+
+.Attractions_tag {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttractions_tag", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attractions_tag !optional;
+}
+
+%BaseAttractions_tagMargin_5_0_2_0 {
+	@extend %BaseAttractions_tag !optional;
+
+}
+
+%CustomVars_Attractions_tagMargin_5_0_2_0 {
+--margin-top: 5px;--margin-right: 0px;--margin-bottom: 2px;--margin-left: 0px;
+}
+
+.Attractions_tagMargin_5_0_2_0 {
+	@extend %CustomVars_Attractions_tag !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttractions_tagMargin_5_0_2_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attractions_tagMargin_5_0_2_0 !optional;
+}
+
+
+
+%BasePackages_tag {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 13px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Packages_tag {
+}
+
+.Packages_tag {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BasePackages_tag", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Packages_tag !optional;
+}
+
+%BasePackages_tagMargin_5_0_0_0 {
+	@extend %BasePackages_tag !optional;
+
+}
+
+%CustomVars_Packages_tagMargin_5_0_0_0 {
+--margin-top: 5px;--margin-right: 0px;--margin-bottom: 0px;--margin-left: 0px;
+}
+
+.Packages_tagMargin_5_0_0_0 {
+	@extend %CustomVars_Packages_tag !optional;
+	@include gx-form-field( 
+		$class: "%BasePackages_tagMargin_5_0_0_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Packages_tagMargin_5_0_0_0 !optional;
+}
+
+
+
+%BaseTrips_tag {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 13px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Trips_tag {
+}
+
+.Trips_tag {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseTrips_tag", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Trips_tag !optional;
+}
+
+%BaseTrips_tagMargin_5_0_0_0 {
+	@extend %BaseTrips_tag !optional;
+
+}
+
+%CustomVars_Trips_tagMargin_5_0_0_0 {
+--margin-top: 5px;--margin-right: 0px;--margin-bottom: 0px;--margin-left: 0px;
+}
+
+.Trips_tagMargin_5_0_0_0 {
+	@extend %CustomVars_Trips_tag !optional;
+	@include gx-form-field( 
+		$class: "%BaseTrips_tagMargin_5_0_0_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Trips_tagMargin_5_0_0_0 !optional;
+}
+
+
+
+%BaseCruises_tag {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 13px;
+
+
+	color: #6B6B6B;
+
+
+
+}
+
+%CustomVars_Cruises_tag {
+}
+
+.Cruises_tag {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseCruises_tag", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Cruises_tag !optional;
+}
+
+%BaseCruises_tagMargin_5_0_0_0 {
+	@extend %BaseCruises_tag !optional;
+
+}
+
+%CustomVars_Cruises_tagMargin_5_0_0_0 {
+--margin-top: 5px;--margin-right: 0px;--margin-bottom: 0px;--margin-left: 0px;
+}
+
+.Cruises_tagMargin_5_0_0_0 {
+	@extend %CustomVars_Cruises_tag !optional;
+	@include gx-form-field( 
+		$class: "%BaseCruises_tagMargin_5_0_0_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Cruises_tagMargin_5_0_0_0 !optional;
+}
+
+
+
+%BaseTitle1 {
+	@extend %BaseSketchAttribute !optional;
+	font-family: AbhayaLibre-Bold;
+
+
+	font-size: 24px;
+
+
+	color: #111111;
+
+
+
+}
+
+%CustomVars_Title1 {
+}
+
+.Title1 {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseTitle1", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Title1 !optional;
+}
+
+%BaseTitle1Margin_23_0_16_0 {
+	@extend %BaseTitle1 !optional;
+
+}
+
+%CustomVars_Title1Margin_23_0_16_0 {
+--margin-top: 23px;--margin-right: 0px;--margin-bottom: 16px;--margin-left: 0px;
+}
+
+.Title1Margin_23_0_16_0 {
+	@extend %CustomVars_Title1 !optional;
+	@include gx-form-field( 
+		$class: "%BaseTitle1Margin_23_0_16_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Title1Margin_23_0_16_0 !optional;
+}
+
+
+
+%BaseInput_search_text {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Graphik-RegularItalic;
+
+
+	font-size: 16px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Input_search_text {
+}
+
+.Input_search_text {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseInput_search_text", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Input_search_text !optional;
+}
+
+%BaseInput_search_textMargin_14_0_14_0 {
+	@extend %BaseInput_search_text !optional;
+
+}
+
+%CustomVars_Input_search_textMargin_14_0_14_0 {
+--margin-top: 14px;--margin-right: 0px;--margin-bottom: 14px;--margin-left: 0px;
+}
+
+.Input_search_textMargin_14_0_14_0 {
+	@extend %CustomVars_Input_search_text !optional;
+	@include gx-form-field( 
+		$class: "%BaseInput_search_textMargin_14_0_14_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Input_search_textMargin_14_0_14_0 !optional;
+}
+
+
+
+%BaseAttractions_label {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Attractions_label {
+}
+
+.Attractions_label {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttractions_label", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attractions_label !optional;
+}
+
+%BaseAttractions_labelMargin_7_0_36_0 {
+	@extend %BaseAttractions_label !optional;
+
+}
+
+%CustomVars_Attractions_labelMargin_7_0_36_0 {
+--margin-top: 7px;--margin-right: 0px;--margin-bottom: 36px;--margin-left: 0px;
+}
+
+.Attractions_labelMargin_7_0_36_0 {
+	@extend %CustomVars_Attractions_label !optional;
+	@include gx-form-field( 
+		$class: "%BaseAttractions_labelMargin_7_0_36_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Attractions_labelMargin_7_0_36_0 !optional;
+}
+
+
+
+%BasePackages_label {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Packages_label {
+}
+
+.Packages_label {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BasePackages_label", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Packages_label !optional;
+}
+
+%BasePackages_labelMargin_7_0_36_0 {
+	@extend %BasePackages_label !optional;
+
+}
+
+%CustomVars_Packages_labelMargin_7_0_36_0 {
+--margin-top: 7px;--margin-right: 0px;--margin-bottom: 36px;--margin-left: 0px;
+}
+
+.Packages_labelMargin_7_0_36_0 {
+	@extend %CustomVars_Packages_label !optional;
+	@include gx-form-field( 
+		$class: "%BasePackages_labelMargin_7_0_36_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Packages_labelMargin_7_0_36_0 !optional;
+}
+
+
+
+%BaseFlights_label {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Flights_label {
+}
+
+.Flights_label {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseFlights_label", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Flights_label !optional;
+}
+
+%BaseFlights_labelMargin_7_0_36_0 {
+	@extend %BaseFlights_label !optional;
+
+}
+
+%CustomVars_Flights_labelMargin_7_0_36_0 {
+--margin-top: 7px;--margin-right: 0px;--margin-bottom: 36px;--margin-left: 0px;
+}
+
+.Flights_labelMargin_7_0_36_0 {
+	@extend %CustomVars_Flights_label !optional;
+	@include gx-form-field( 
+		$class: "%BaseFlights_labelMargin_7_0_36_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Flights_labelMargin_7_0_36_0 !optional;
+}
+
+
+
+%BaseCruises_label {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Rubik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Cruises_label {
+}
+
+.Cruises_label {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseCruises_label", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Cruises_label !optional;
+}
+
+%BaseCruises_labelMargin_7_0_36_0 {
+	@extend %BaseCruises_label !optional;
+
+}
+
+%CustomVars_Cruises_labelMargin_7_0_36_0 {
+--margin-top: 7px;--margin-right: 0px;--margin-bottom: 36px;--margin-left: 0px;
+}
+
+.Cruises_labelMargin_7_0_36_0 {
+	@extend %CustomVars_Cruises_label !optional;
+	@include gx-form-field( 
+		$class: "%BaseCruises_labelMargin_7_0_36_0", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Cruises_labelMargin_7_0_36_0 !optional;
+}
+
+
+
+%BaseTitle2 {
+	@extend %BaseSketchAttribute !optional;
+	font-family: Graphik-Bold;
+
+
+	font-size: 56px;
+
+
+	color: #E21710;
+
+
+
+}
+
+%CustomVars_Title2 {
+}
+
+.Title2 {
+	@extend %CustomVars_SketchAttribute !optional;
+	@include gx-form-field( 
+		$class: "%BaseTitle2", 
+		$label: ".TextBlock"
+
+	);
+	@extend %CustomVars_Title2 !optional;
+}
+
+
+
+
+%BaseButton {
+	border-style: none;
+
+
+	text-transform: uppercase;
+}
+
+%CustomVars_Button {
+}
+
+.Button {
+	@include gx-button( 
+		$class: "%BaseButton"
+	);
+	@extend %CustomVars_Button !optional;
+}
+
+%BaseButtonDelete {
+	@extend %BaseButton !optional;
+	border-style: none;
+
+
+
+}
+
+%CustomVars_ButtonDelete {
+}
+
+.ButtonDelete {
+	@extend %CustomVars_Button !optional;
+	@include gx-button( 
+		$class: "%BaseButtonDelete"
+	);
+	@extend %CustomVars_ButtonDelete !optional;
+}
+
+
+%BaseButtonActionBar {
+	@extend %BaseButton !optional;
+	border-style: none;
+
+
+
+}
+
+%CustomVars_ButtonActionBar {
+}
+
+.ButtonActionBar {
+	@extend %CustomVars_Button !optional;
+	@include gx-button( 
+		$class: "%BaseButtonActionBar"
+	);
+	@extend %CustomVars_ButtonActionBar !optional;
+}
+
+
+%BaseConfirmButton {
+	@extend %BaseButton !optional;
+	border-style: none;
+
+
+
+}
+
+%CustomVars_ConfirmButton {
+}
+
+.ConfirmButton {
+	@extend %CustomVars_Button !optional;
+	@include gx-button( 
+		$class: "%BaseConfirmButton"
+	);
+	@extend %CustomVars_ConfirmButton !optional;
+}
+
+
+%BaseSketchButton {
+	@extend %BaseButton !optional;
+	border-style: none;
+
+
+	background-color: rgba(0, 0, 0, 0);
+
+
+
+}
+
+%CustomVars_SketchButton {
+}
+
+.SketchButton {
+	@extend %CustomVars_Button !optional;
+	@include gx-button( 
+		$class: "%BaseSketchButton"
+	);
+	@extend %CustomVars_SketchButton !optional;
+}
+
+%BaseButton_Small {
+	@extend %BaseSketchButton !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 8px;
+
+
+	border-top-right-radius: 8px;
+
+
+	border-bottom-left-radius: 8px;
+
+
+	border-bottom-right-radius: 8px;
+
+
+	background-color: #E21710;
+
+
+	font-family: Graphik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Button_Small {
+--elevation: 4;
+
+}
+
+.Button_Small {
+	@extend %CustomVars_SketchButton !optional;
+	@include gx-button( 
+		$class: "%BaseButton_Small"
+	);
+	@extend %CustomVars_Button_Small !optional;
+}
+
+
+%BaseButton_small1 {
+	@extend %BaseSketchButton !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 8px;
+
+
+	border-top-right-radius: 8px;
+
+
+	border-bottom-left-radius: 8px;
+
+
+	border-bottom-right-radius: 8px;
+
+
+	background-color: #E21710;
+
+
+	font-family: Graphik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Button_small1 {
+--elevation: 4;
+
+}
+
+.Button_small1 {
+	@extend %CustomVars_SketchButton !optional;
+	@include gx-button( 
+		$class: "%BaseButton_small1"
+	);
+	@extend %CustomVars_Button_small1 !optional;
+}
+
+
+%BaseButton_small2 {
+	@extend %BaseSketchButton !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 8px;
+
+
+	border-top-right-radius: 8px;
+
+
+	border-bottom-left-radius: 8px;
+
+
+	border-bottom-right-radius: 8px;
+
+
+	background-color: #E21710;
+
+
+	font-family: Graphik-Regular;
+
+
+	font-size: 14px;
+
+
+	color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Button_small2 {
+--elevation: 4;
+
+}
+
+.Button_small2 {
+	@extend %CustomVars_SketchButton !optional;
+	@include gx-button( 
+		$class: "%BaseButton_small2"
+	);
+	@extend %CustomVars_Button_small2 !optional;
+}
+
+
+
+
+%BaseMenu {
+}
+
+%CustomVars_Menu {
+}
+
+.Menu {
+	// No mixin available for this class at the moment
+	@extend %BaseMenu !optional;
+
+	@extend %CustomVars_Menu !optional;
+}
+
+%BaseSketchMenu {
+	@extend %BaseMenu !optional;
+
+}
+
+%CustomVars_SketchMenu {
+}
+
+.SketchMenu {
+	@extend %CustomVars_Menu !optional;
+	// No mixin available for this class at the moment
+	@extend %BaseSketchMenu !optional;
+
+	@extend %CustomVars_SketchMenu !optional;
+}
+
+
+
+%BaseMenuItem {
+}
+
+%CustomVars_MenuItem {
+}
+
+.MenuItem {
+	// No mixin available for this class at the moment
+	@extend %BaseMenuItem !optional;
+
+	@extend %CustomVars_MenuItem !optional;
+}
+
+%BaseSketchMenuItem {
+	@extend %BaseMenuItem !optional;
+
+}
+
+%CustomVars_SketchMenuItem {
+}
+
+.SketchMenuItem {
+	@extend %CustomVars_MenuItem !optional;
+	// No mixin available for this class at the moment
+	@extend %BaseSketchMenuItem !optional;
+
+	@extend %CustomVars_SketchMenuItem !optional;
+}
+
+
+
+%BaseGrid {
+	background-size: 100% 100%;
+
+
+
+}
+
+%CustomVars_Grid {
+--grid--horizontal-line-separator: var(--grid--horizontal-line-separator-default);
+
+}
+
+.Grid {
+	@include gx-grid-base( 
+		$class: "%BaseGrid", 
+		$horizontal-line: ".HorizontalLine"
+
+	);
+	@extend %CustomVars_Grid !optional;
+}
+
+%BaseSketchGrid {
+	@extend %BaseGrid !optional;
+	background-color: #FFFFFF00;
+
+
+
+}
+
+%CustomVars_SketchGrid {
+}
+
+.SketchGrid {
+	@extend %CustomVars_Grid !optional;
+	@include gx-grid-base( 
+		$class: "%BaseSketchGrid", 
+		$horizontal-line: ".HorizontalLine"
+
+	);
+	@extend %CustomVars_SketchGrid !optional;
+}
+
+%BaseSketchGridForMenu {
+	@extend %BaseSketchGrid !optional;
+
+}
+
+%CustomVars_SketchGridForMenu {
+}
+
+.SketchGridForMenu {
+	@extend %CustomVars_SketchGrid !optional;
+	@include gx-grid-base( 
+		$class: "%BaseSketchGridForMenu", 
+		$horizontal-line: ".HorizontalLine"
+
+	);
+	@extend %CustomVars_SketchGridForMenu !optional;
+}
+
+
+%BaseGrid_Attractions_Small {
+	@extend %BaseSketchGrid !optional;
+
+}
+
+%CustomVars_Grid_Attractions_Small {
+}
+
+.Grid_Attractions_Small {
+	@extend %CustomVars_SketchGrid !optional;
+	@include gx-grid-base( 
+		$class: "%BaseGrid_Attractions_Small", 
+		$horizontal-line: ".Grid_Attractions_Small_HL"
+	, 
+		$odd-row: ".Grid_Attractions_Small_Row"
+	, 
+		$even-row: ".Grid_Attractions_Small_Row"
+
+	);
+	@extend %CustomVars_Grid_Attractions_Small !optional;
+}
+
+%BaseGrid_Attractions_SmallMargin_16_0_20_0 {
+	@extend %BaseGrid_Attractions_Small !optional;
+	margin-bottom: 20px;
+
+
+	margin-left: 0px;
+
+
+	margin-right: 0px;
+
+
+	margin-top: 16px;
+
+
+
+}
+
+%CustomVars_Grid_Attractions_SmallMargin_16_0_20_0 {
+}
+
+.Grid_Attractions_SmallMargin_16_0_20_0 {
+	@extend %CustomVars_Grid_Attractions_Small !optional;
+	@include gx-grid-base( 
+		$class: "%BaseGrid_Attractions_SmallMargin_16_0_20_0", 
+		$odd-row: ".Grid_Attractions_Small_Row"
+	, 
+		$even-row: ".Grid_Attractions_Small_Row"
+	, 
+		$horizontal-line: ".HorizontalLine"
+
+	);
+	@extend %CustomVars_Grid_Attractions_SmallMargin_16_0_20_0 !optional;
+}
+
+
+
+%BaseGrid_attractions_Big {
+	@extend %BaseSketchGrid !optional;
+
+}
+
+%CustomVars_Grid_attractions_Big {
+}
+
+.Grid_attractions_Big {
+	@extend %CustomVars_SketchGrid !optional;
+	@include gx-grid-base( 
+		$class: "%BaseGrid_attractions_Big", 
+		$horizontal-line: ".Grid_attractions_Big_HL"
+	, 
+		$odd-row: ".Grid_attractions_Big_Row"
+	, 
+		$even-row: ".Grid_attractions_Big_Row"
+
+	);
+	@extend %CustomVars_Grid_attractions_Big !optional;
+}
+
+
+
+
+%BaseGridRow {
+	background-size: 100% 100%;
+
+
+
+}
+
+%CustomVars_GridRow {
+}
+
+.GridRow {
+	@include gx-grid-base-row( 
+		$class: "%BaseGridRow"
+	);
+	@extend %CustomVars_GridRow !optional;
+}
+
+%BaseGridRowOdd {
+	@extend %BaseGridRow !optional;
+
+}
+
+%CustomVars_GridRowOdd {
+}
+
+.GridRowOdd {
+	@extend %CustomVars_GridRow !optional;
+	@include gx-grid-base-row( 
+		$class: "%BaseGridRowOdd"
+	);
+	@extend %CustomVars_GridRowOdd !optional;
+}
+
+
+%BaseGridRowEven {
+	@extend %BaseGridRow !optional;
+
+}
+
+%CustomVars_GridRowEven {
+}
+
+.GridRowEven {
+	@extend %CustomVars_GridRow !optional;
+	@include gx-grid-base-row( 
+		$class: "%BaseGridRowEven"
+	);
+	@extend %CustomVars_GridRowEven !optional;
+}
+
+
+%BaseGrid_Attractions_Small_Row {
+	@extend %BaseGridRow !optional;
+	margin-bottom: 0px;
+
+
+	margin-left: 0px;
+
+
+	margin-right: 15px;
+
+
+	margin-top: 0px;
+
+
+
+}
+
+%CustomVars_Grid_Attractions_Small_Row {
+}
+
+.Grid_Attractions_Small_Row {
+	@extend %CustomVars_GridRow !optional;
+	@include gx-grid-base-row( 
+		$class: "%BaseGrid_Attractions_Small_Row"
+	);
+	@extend %CustomVars_Grid_Attractions_Small_Row !optional;
+}
+
+
+%BaseGrid_attractions_Big_Row {
+	@extend %BaseGridRow !optional;
+	margin-bottom: 0px;
+
+
+	margin-left: 0px;
+
+
+	margin-right: 15px;
+
+
+	margin-top: 0px;
+
+
+
+}
+
+%CustomVars_Grid_attractions_Big_Row {
+}
+
+.Grid_attractions_Big_Row {
+	@extend %CustomVars_GridRow !optional;
+	@include gx-grid-base-row( 
+		$class: "%BaseGrid_attractions_Big_Row"
+	);
+	@extend %CustomVars_Grid_attractions_Big_Row !optional;
+}
+
+
+
+%BaseGroup {
+	background-size: 100% 100%;
+
+
+	sdmotion-max-horizontal: 0;
+
+
+	sdmotion-max-vertical: 0;
+
+
+
+}
+
+%CustomVars_Group {
+}
+
+.Group {
+	@include gx-group( 
+		$class: "%BaseGroup"
+	);
+	@extend %CustomVars_Group !optional;
+}
+
+
+%BaseGroupSeparator {
+}
+
+%CustomVars_GroupSeparator {
+}
+
+.GroupSeparator {
+	// No mixin available for this class at the moment
+	@extend %BaseGroupSeparator !optional;
+
+	@extend %CustomVars_GroupSeparator !optional;
+}
+
+
+%BaseHorizontalLine {
+	background-color: #cfcfcf;
+
+
+
+}
+
+%CustomVars_HorizontalLine {
+}
+
+.HorizontalLine {
+	// No mixin available for this class at the moment
+	@extend %BaseHorizontalLine !optional;
+
+	@extend %CustomVars_HorizontalLine !optional;
+}
+
+%BaseMatrixLineSeparator {
+	@extend %BaseHorizontalLine !optional;
+	background-color: #cfcfcf;
+
+
+
+}
+
+%CustomVars_MatrixLineSeparator {
+}
+
+.MatrixLineSeparator {
+	@extend %CustomVars_HorizontalLine !optional;
+	// No mixin available for this class at the moment
+	@extend %BaseMatrixLineSeparator !optional;
+
+	@extend %CustomVars_MatrixLineSeparator !optional;
+}
+
+
+%BaseWWLineSeparator {
+	@extend %BaseHorizontalLine !optional;
+	background-color: #cfcfcf;
+
+
+
+}
+
+%CustomVars_WWLineSeparator {
+}
+
+.WWLineSeparator {
+	@extend %CustomVars_HorizontalLine !optional;
+	// No mixin available for this class at the moment
+	@extend %BaseWWLineSeparator !optional;
+
+	@extend %CustomVars_WWLineSeparator !optional;
+}
+
+
+%BaseSketchHorizontalLine {
+	@extend %BaseHorizontalLine !optional;
+	background-color: #cfcfcf;
+
+
+
+}
+
+%CustomVars_SketchHorizontalLine {
+}
+
+.SketchHorizontalLine {
+	@extend %CustomVars_HorizontalLine !optional;
+	// No mixin available for this class at the moment
+	@extend %BaseSketchHorizontalLine !optional;
+
+	@extend %CustomVars_SketchHorizontalLine !optional;
+}
+
+%BaseGrid_Attractions_Small_HL {
+	@extend %BaseSketchHorizontalLine !optional;
+	background-color: #cfcfcf;
+
+
+	margin-bottom: 0px
+}
+
+%CustomVars_Grid_Attractions_Small_HL {
+}
+
+.Grid_Attractions_Small_HL {
+	@extend %CustomVars_SketchHorizontalLine !optional;
+	// No mixin available for this class at the moment
+	@extend %BaseGrid_Attractions_Small_HL !optional;
+
+	@extend %CustomVars_Grid_Attractions_Small_HL !optional;
+}
+
+
+%BaseGrid_attractions_Big_HL {
+	@extend %BaseSketchHorizontalLine !optional;
+	background-color: #cfcfcf;
+
+
+	margin-bottom: 0px
+}
+
+%CustomVars_Grid_attractions_Big_HL {
+}
+
+.Grid_attractions_Big_HL {
+	@extend %CustomVars_SketchHorizontalLine !optional;
+	// No mixin available for this class at the moment
+	@extend %BaseGrid_attractions_Big_HL !optional;
+
+	@extend %CustomVars_Grid_attractions_Big_HL !optional;
+}
+
+
+
+
+%BaseImage {
+	sdmotion-max-horizontal: 0;
+
+
+	sdmotion-max-vertical: 0;
+
+
+
+}
+
+%CustomVars_Image {
+--image-loading-indicator: none;
+
+}
+
+.Image {
+	@include gx-image-attribute( 
+		$class: "%BaseImage"
+	);
+	@extend %CustomVars_Image !optional;
+}
+
+%BaseWWImage {
+	@extend %BaseImage !optional;
+
+}
+
+%CustomVars_WWImage {
+}
+
+.WWImage {
+	@extend %CustomVars_Image !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseWWImage"
+	);
+	@extend %CustomVars_WWImage !optional;
+}
+
+
+%BaseViewImage {
+	@extend %BaseImage !optional;
+
+}
+
+%CustomVars_ViewImage {
+}
+
+.ViewImage {
+	@extend %CustomVars_Image !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseViewImage"
+	);
+	@extend %CustomVars_ViewImage !optional;
+}
+
+
+%BaseSketchImage {
+	@extend %BaseImage !optional;
+
+}
+
+%CustomVars_SketchImage {
+--image-scale-type: contain;
+
+}
+
+.SketchImage {
+	@extend %CustomVars_Image !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseSketchImage"
+	);
+	@extend %CustomVars_SketchImage !optional;
+}
+
+%BaseTrip_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Trip_icon {
+}
+
+.Trip_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseTrip_icon"
+	);
+	@extend %CustomVars_Trip_icon !optional;
+}
+
+
+%BaseStar_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Star_icon {
+--height: 16px;--width: 16px;
+}
+
+.Star_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseStar_icon"
+	);
+	@extend %CustomVars_Star_icon !optional;
+}
+
+
+%BaseLocation_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Location_icon {
+--height: 14px;--width: 10px;
+}
+
+.Location_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseLocation_icon"
+	);
+	@extend %CustomVars_Location_icon !optional;
+}
+
+
+%BaseAttraction_image {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Attraction_image {
+--height: 200px;--width: 160px;
+}
+
+.Attraction_image {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseAttraction_image"
+	);
+	@extend %CustomVars_Attraction_image !optional;
+}
+
+
+%BaseAttraction_image1 {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Attraction_image1 {
+--height: 400px;--width: 320px;
+}
+
+.Attraction_image1 {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseAttraction_image1"
+	);
+	@extend %CustomVars_Attraction_image1 !optional;
+}
+
+
+%BaseStar_icon1 {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Star_icon1 {
+--height: 16px;--width: 16px;
+}
+
+.Star_icon1 {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseStar_icon1"
+	);
+	@extend %CustomVars_Star_icon1 !optional;
+}
+
+
+%BaseLocation_white_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Location_white_icon {
+--height: 14px;--width: 10px;
+}
+
+.Location_white_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseLocation_white_icon"
+	);
+	@extend %CustomVars_Location_white_icon !optional;
+}
+
+
+%BaseSearch_Icon_Grey {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Search_Icon_Grey {
+--height: 42px;--width: 42px;
+}
+
+.Search_Icon_Grey {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseSearch_Icon_Grey"
+	);
+	@extend %CustomVars_Search_Icon_Grey !optional;
+}
+
+
+%BaseChatbot1 {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Chatbot1 {
+--height: 80px;--width: 80px;
+}
+
+.Chatbot1 {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseChatbot1"
+	);
+	@extend %CustomVars_Chatbot1 !optional;
+}
+
+
+%BaseAttraction_image2 {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Attraction_image2 {
+--image-scale-type: cover;
+
+--height: 517px;
+}
+
+.Attraction_image2 {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseAttraction_image2"
+	);
+	@extend %CustomVars_Attraction_image2 !optional;
+}
+
+
+%BaseBack_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Back_icon {
+--height: 24px;--width: 14px;
+}
+
+.Back_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseBack_icon"
+	);
+	@extend %CustomVars_Back_icon !optional;
+}
+
+
+%BaseMap_Louvre {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Map_Louvre {
+--image-scale-type: cover;
+
+--height: 664px;
+}
+
+.Map_Louvre {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseMap_Louvre"
+	);
+	@extend %CustomVars_Map_Louvre !optional;
+}
+
+
+%BaseForgotten_Kingdoms {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Forgotten_Kingdoms {
+--height: 442px;--width: 354px;
+}
+
+.Forgotten_Kingdoms {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseForgotten_Kingdoms"
+	);
+	@extend %CustomVars_Forgotten_Kingdoms !optional;
+}
+
+
+%BaseAttraction_image3 {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Attraction_image3 {
+--image-scale-type: cover;
+
+--height: 517px;--width: 414px;
+}
+
+.Attraction_image3 {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseAttraction_image3"
+	);
+	@extend %CustomVars_Attraction_image3 !optional;
+}
+
+
+%BaseBack_icon1 {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Back_icon1 {
+--height: 24px;--width: 14px;
+}
+
+.Back_icon1 {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseBack_icon1"
+	);
+	@extend %CustomVars_Back_icon1 !optional;
+}
+
+
+%BaseArrow {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Arrow {
+--height: 10px;--width: 38px;
+}
+
+.Arrow {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseArrow"
+	);
+	@extend %CustomVars_Arrow !optional;
+}
+
+
+%BaseAttractions_grey_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Attractions_grey_icon {
+--height: 40px;--width: 38px;
+}
+
+.Attractions_grey_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseAttractions_grey_icon"
+	);
+	@extend %CustomVars_Attractions_grey_icon !optional;
+}
+
+
+%BasePackage_grey_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Package_grey_icon {
+--height: 40px;--width: 42px;
+}
+
+.Package_grey_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BasePackage_grey_icon"
+	);
+	@extend %CustomVars_Package_grey_icon !optional;
+}
+
+
+%BaseTrips_grey_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Trips_grey_icon {
+--height: 40px;--width: 40px;
+}
+
+.Trips_grey_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseTrips_grey_icon"
+	);
+	@extend %CustomVars_Trips_grey_icon !optional;
+}
+
+
+%BaseCruises_grey_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Cruises_grey_icon {
+--height: 40px;--width: 46px;
+}
+
+.Cruises_grey_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseCruises_grey_icon"
+	);
+	@extend %CustomVars_Cruises_grey_icon !optional;
+}
+
+
+%BaseLogo {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Logo {
+--height: 44px;--width: 157px;
+}
+
+.Logo {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseLogo"
+	);
+	@extend %CustomVars_Logo !optional;
+}
+
+
+%BaseBackground_Home {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Background_Home {
+--image-scale-type: cover;
+
+--height: 896px;
+}
+
+.Background_Home {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseBackground_Home"
+	);
+	@extend %CustomVars_Background_Home !optional;
+}
+
+
+%BaseSearch_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Search_icon {
+--height: 20px;--width: 20px;
+}
+
+.Search_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseSearch_icon"
+	);
+	@extend %CustomVars_Search_icon !optional;
+}
+
+%BaseSearch_iconMargin_0_0_0_15 {
+	@extend %BaseSearch_icon !optional;
+
+}
+
+%CustomVars_Search_iconMargin_0_0_0_15 {
+--margin-top: 0px;--margin-right: 15px;--margin-bottom: 0px;--margin-left: 0px;
+}
+
+.Search_iconMargin_0_0_0_15 {
+	@extend %CustomVars_Search_icon !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseSearch_iconMargin_0_0_0_15"
+	);
+	@extend %CustomVars_Search_iconMargin_0_0_0_15 !optional;
+}
+
+
+
+%BaseAttractions_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Attractions_icon {
+--height: 53px;--width: 51px;
+}
+
+.Attractions_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseAttractions_icon"
+	);
+	@extend %CustomVars_Attractions_icon !optional;
+}
+
+
+%BasePackages_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Packages_icon {
+--height: 53px;--width: 56px;
+}
+
+.Packages_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BasePackages_icon"
+	);
+	@extend %CustomVars_Packages_icon !optional;
+}
+
+
+%BaseFlights_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Flights_icon {
+--height: 53px;--width: 53px;
+}
+
+.Flights_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseFlights_icon"
+	);
+	@extend %CustomVars_Flights_icon !optional;
+}
+
+
+%BaseShip_icon {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Ship_icon {
+--height: 53px;--width: 61px;
+}
+
+.Ship_icon {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseShip_icon"
+	);
+	@extend %CustomVars_Ship_icon !optional;
+}
+
+
+%BaseLogo1 {
+	@extend %BaseSketchImage !optional;
+
+}
+
+%CustomVars_Logo1 {
+--height: 44px;--width: 157px;
+}
+
+.Logo1 {
+	@extend %CustomVars_SketchImage !optional;
+	@include gx-image-attribute( 
+		$class: "%BaseLogo1"
+	);
+	@extend %CustomVars_Logo1 !optional;
+}
+
+
+
+
+%BaseMultimedia {
+}
+
+%CustomVars_Multimedia {
+}
+
+.Multimedia {
+	// No mixin available for this class at the moment
+	@extend %BaseMultimedia !optional;
+
+	@extend %CustomVars_Multimedia !optional;
+}
+
+
+%BaseProgress {
+}
+
+%CustomVars_Progress {
+}
+
+.Progress {
+	@include gx-loading( 
+		$class: "%BaseProgress"
+	);
+	@extend %CustomVars_Progress !optional;
+}
+
+
+%BaseTab {
+}
+
+%CustomVars_Tab {
+}
+
+.Tab {
+	@include gx-tab( 
+		$class: "%BaseTab"
+	);
+	@extend %CustomVars_Tab !optional;
+}
+
+%BaseSketchTab {
+	@extend %BaseTab !optional;
+	background-color: #FFFFFF00;
+
+
+
+}
+
+%CustomVars_SketchTab {
+}
+
+.SketchTab {
+	@extend %CustomVars_Tab !optional;
+	@include gx-tab( 
+		$class: "%BaseSketchTab", 
+		$selected-tab-caption: ".SketchTabPageSelected"
+	, 
+		$unselected-tab-caption: ".SketchTabPageUnselected"
+
+	);
+	@extend %CustomVars_SketchTab !optional;
+}
+
+%BaseSketchTabForMenu {
+	@extend %BaseSketchTab !optional;
+	tabs-position: bottom;
+
+
+
+}
+
+%CustomVars_SketchTabForMenu {
+}
+
+.SketchTabForMenu {
+	@extend %CustomVars_SketchTab !optional;
+	@include gx-tab( 
+		$class: "%BaseSketchTabForMenu", 
+		$selected-tab-caption: ".SketchTabPageSelected"
+	, 
+		$unselected-tab-caption: ".SketchTabPageUnselected"
+
+	);
+	@extend %CustomVars_SketchTabForMenu !optional;
+}
+
+
+
+
+%BaseTabPage {
+	text-transform: uppercase;
+}
+
+%CustomVars_TabPage {
+}
+
+.TabPage {
+	@include gx-tab-caption( 
+		$class: "%BaseTabPage"
+	);
+	@extend %CustomVars_TabPage !optional;
+}
+
+%BaseTabPageSelected {
+	@extend %BaseTabPage !optional;
+
+}
+
+%CustomVars_TabPageSelected {
+}
+
+.TabPageSelected {
+	@extend %CustomVars_TabPage !optional;
+	@include gx-tab-caption( 
+		$class: "%BaseTabPageSelected"
+	);
+	@extend %CustomVars_TabPageSelected !optional;
+}
+
+%BaseSketchTabPageSelected {
+	@extend %BaseTabPageSelected !optional;
+
+}
+
+%CustomVars_SketchTabPageSelected {
+}
+
+.SketchTabPageSelected {
+	@extend %CustomVars_TabPageSelected !optional;
+	@include gx-tab-caption( 
+		$class: "%BaseSketchTabPageSelected"
+	);
+	@extend %CustomVars_SketchTabPageSelected !optional;
+}
+
+
+
+%BaseTabPageUnselected {
+	@extend %BaseTabPage !optional;
+
+}
+
+%CustomVars_TabPageUnselected {
+}
+
+.TabPageUnselected {
+	@extend %CustomVars_TabPage !optional;
+	@include gx-tab-caption( 
+		$class: "%BaseTabPageUnselected"
+	);
+	@extend %CustomVars_TabPageUnselected !optional;
+}
+
+%BaseSketchTabPageUnselected {
+	@extend %BaseTabPageUnselected !optional;
+
+}
+
+%CustomVars_SketchTabPageUnselected {
+}
+
+.SketchTabPageUnselected {
+	@extend %CustomVars_TabPageUnselected !optional;
+	@include gx-tab-caption( 
+		$class: "%BaseSketchTabPageUnselected"
+	);
+	@extend %CustomVars_SketchTabPageUnselected !optional;
+}
+
+
+
+
+%BaseTable {
+	background-size: 100% 100%;
+
+
+	sdmotion-max-horizontal: 0;
+
+
+	sdmotion-max-vertical: 0;
+
+
+
+}
+
+%CustomVars_Table {
+--table--horizontal-line-separator: none;
+
+}
+
+.Table {
+	@include gx-table( 
+		$class: "%BaseTable"
+	);
+	@extend %CustomVars_Table !optional;
+}
+
+%BaseSketchTableSmallAttractions {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_SketchTableSmallAttractions {
+}
+
+.SketchTableSmallAttractions {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseSketchTableSmallAttractions"
+	);
+	@extend %CustomVars_SketchTableSmallAttractions !optional;
+}
+
+
+%BaseMatrixCell {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_MatrixCell {
+}
+
+.MatrixCell {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseMatrixCell"
+	);
+	@extend %CustomVars_MatrixCell !optional;
+}
+
+
+%BaseMatrixSelectedCell {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_MatrixSelectedCell {
+}
+
+.MatrixSelectedCell {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseMatrixSelectedCell"
+	);
+	@extend %CustomVars_MatrixSelectedCell !optional;
+}
+
+
+%BaseMatrixAxisTable {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_MatrixAxisTable {
+}
+
+.MatrixAxisTable {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseMatrixAxisTable"
+	);
+	@extend %CustomVars_MatrixAxisTable !optional;
+}
+
+
+%BaseMatrixEvenRowTable {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_MatrixEvenRowTable {
+}
+
+.MatrixEvenRowTable {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseMatrixEvenRowTable"
+	);
+	@extend %CustomVars_MatrixEvenRowTable !optional;
+}
+
+
+%BaseMatrixOddRowTable {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_MatrixOddRowTable {
+}
+
+.MatrixOddRowTable {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseMatrixOddRowTable"
+	);
+	@extend %CustomVars_MatrixOddRowTable !optional;
+}
+
+
+%BaseMatrixSelectedRowTable {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_MatrixSelectedRowTable {
+}
+
+.MatrixSelectedRowTable {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseMatrixSelectedRowTable"
+	);
+	@extend %CustomVars_MatrixSelectedRowTable !optional;
+}
+
+
+%BaseTableDetail {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_TableDetail {
+}
+
+.TableDetail {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseTableDetail"
+	);
+	@extend %CustomVars_TableDetail !optional;
+}
+
+
+%BaseTableSection {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_TableSection {
+}
+
+.TableSection {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseTableSection"
+	);
+	@extend %CustomVars_TableSection !optional;
+}
+
+%BaseTableSectioninsert {
+	@extend %BaseTableSection !optional;
+
+}
+
+%CustomVars_TableSectioninsert {
+}
+
+.TableSectioninsert {
+	@extend %CustomVars_TableSection !optional;
+	@include gx-table( 
+		$class: "%BaseTableSectioninsert"
+	);
+	@extend %CustomVars_TableSectioninsert !optional;
+}
+
+
+
+%BaseMainTable {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_MainTable {
+}
+
+.MainTable {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseMainTable"
+	);
+	@extend %CustomVars_MainTable !optional;
+}
+
+
+%BaseGridContainer {
+	@extend %BaseTable !optional;
+
+}
+
+%CustomVars_GridContainer {
+}
+
+.GridContainer {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseGridContainer"
+	);
+	@extend %CustomVars_GridContainer !optional;
+}
+
+
+%BaseSketchTable {
+	@extend %BaseTable !optional;
+	background-color: #FFFFFF00;
+
+
+
+}
+
+%CustomVars_SketchTable {
+}
+
+.SketchTable {
+	@extend %CustomVars_Table !optional;
+	@include gx-table( 
+		$class: "%BaseSketchTable"
+	);
+	@extend %CustomVars_SketchTable !optional;
+}
+
+%BaseTrips1 {
+	@extend %BaseSketchTable !optional;
+
+}
+
+%CustomVars_Trips1 {
+}
+
+.Trips1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseTrips1"
+	);
+	@extend %CustomVars_Trips1 !optional;
+}
+
+
+%BaseMain_Color {
+	@extend %BaseSketchTable !optional;
+	border-width: 0px;
+
+
+	background-color: #E21710;
+
+
+
+}
+
+%CustomVars_Main_Color {
+}
+
+.Main_Color {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseMain_Color"
+	);
+	@extend %CustomVars_Main_Color !optional;
+}
+
+%BaseBackground3 {
+	@extend %BaseMain_Color !optional;
+	border-style: solid;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 20px;
+
+
+	border-bottom-right-radius: 20px;
+
+
+
+}
+
+%CustomVars_Background3 {
+--elevation: 4;
+
+}
+
+.Background3 {
+	@extend %CustomVars_Main_Color !optional;
+	@include gx-table( 
+		$class: "%BaseBackground3"
+	);
+	@extend %CustomVars_Background3 !optional;
+}
+
+
+%BaseBackground4 {
+	@extend %BaseMain_Color !optional;
+	border-style: solid;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 20px;
+
+
+	border-bottom-right-radius: 20px;
+
+
+
+}
+
+%CustomVars_Background4 {
+--elevation: 4;
+
+}
+
+.Background4 {
+	@extend %CustomVars_Main_Color !optional;
+	@include gx-table( 
+		$class: "%BaseBackground4"
+	);
+	@extend %CustomVars_Background4 !optional;
+}
+
+
+%BaseBackground5 {
+	@extend %BaseMain_Color !optional;
+	border-style: solid;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 20px;
+
+
+	border-bottom-right-radius: 20px;
+
+
+
+}
+
+%CustomVars_Background5 {
+--elevation: 4;
+
+}
+
+.Background5 {
+	@extend %CustomVars_Main_Color !optional;
+	@include gx-table( 
+		$class: "%BaseBackground5"
+	);
+	@extend %CustomVars_Background5 !optional;
+}
+
+
+%BaseBackground6 {
+	@extend %BaseMain_Color !optional;
+	border-style: solid;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 20px;
+
+
+	border-bottom-right-radius: 20px;
+
+
+
+}
+
+%CustomVars_Background6 {
+--elevation: 4;
+
+}
+
+.Background6 {
+	@extend %CustomVars_Main_Color !optional;
+	@include gx-table( 
+		$class: "%BaseBackground6"
+	);
+	@extend %CustomVars_Background6 !optional;
+}
+
+
+
+%BaseAttraction_Small {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Attraction_Small {
+}
+
+.Attraction_Small {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseAttraction_Small"
+	);
+	@extend %CustomVars_Attraction_Small !optional;
+}
+
+
+%BaseAttraction_Big {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Attraction_Big {
+}
+
+.Attraction_Big {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseAttraction_Big"
+	);
+	@extend %CustomVars_Attraction_Big !optional;
+}
+
+
+%BaseSearch_Small {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Search_Small {
+}
+
+.Search_Small {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseSearch_Small"
+	);
+	@extend %CustomVars_Search_Small !optional;
+}
+
+
+%BaseChatbot {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Chatbot {
+}
+
+.Chatbot {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseChatbot"
+	);
+	@extend %CustomVars_Chatbot !optional;
+}
+
+%BaseChatbotMargin_0_0_0_21 {
+	@extend %BaseChatbot !optional;
+	margin-bottom: 0px;
+
+
+	margin-left: 0px;
+
+
+	margin-right: 21px;
+
+
+	margin-top: 0px;
+
+
+
+}
+
+%CustomVars_ChatbotMargin_0_0_0_21 {
+}
+
+.ChatbotMargin_0_0_0_21 {
+	@extend %CustomVars_Chatbot !optional;
+	@include gx-table( 
+		$class: "%BaseChatbotMargin_0_0_0_21"
+	);
+	@extend %CustomVars_ChatbotMargin_0_0_0_21 !optional;
+}
+
+
+%BaseChatbotMargin_0_0_0_211 {
+	@extend %BaseChatbot !optional;
+	margin-bottom: 0px;
+
+
+	margin-left: 0px;
+
+
+	margin-right: 21px;
+
+
+	margin-top: 0px;
+
+
+
+}
+
+%CustomVars_ChatbotMargin_0_0_0_211 {
+}
+
+.ChatbotMargin_0_0_0_211 {
+	@extend %CustomVars_Chatbot !optional;
+	@include gx-table( 
+		$class: "%BaseChatbotMargin_0_0_0_211"
+	);
+	@extend %CustomVars_ChatbotMargin_0_0_0_211 !optional;
+}
+
+
+
+%BaseLine {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 0px;
+
+
+	border-top-right-radius: 0px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #D8D8D8;
+
+
+
+}
+
+%CustomVars_Line {
+}
+
+.Line {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseLine"
+	);
+	@extend %CustomVars_Line !optional;
+}
+
+
+%BaseGroup_2 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group_2 {
+}
+
+.Group_2 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup_2"
+	);
+	@extend %CustomVars_Group_2 !optional;
+}
+
+
+%BaseGroup1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group1 {
+}
+
+.Group1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup1"
+	);
+	@extend %CustomVars_Group1 !optional;
+}
+
+
+%BaseGroup_3 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group_3 {
+}
+
+.Group_3 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup_3"
+	);
+	@extend %CustomVars_Group_3 !optional;
+}
+
+
+%BaseLine1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 0px;
+
+
+	border-top-right-radius: 0px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #D8D8D8;
+
+
+
+}
+
+%CustomVars_Line1 {
+}
+
+.Line1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseLine1"
+	);
+	@extend %CustomVars_Line1 !optional;
+}
+
+
+%BaseLouvre_Pic {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Louvre_Pic {
+}
+
+.Louvre_Pic {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseLouvre_Pic"
+	);
+	@extend %CustomVars_Louvre_Pic !optional;
+}
+
+
+%BaseGroup_4 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group_4 {
+}
+
+.Group_4 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup_4"
+	);
+	@extend %CustomVars_Group_4 !optional;
+}
+
+
+%BaseGroup_31 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group_31 {
+}
+
+.Group_31 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup_31"
+	);
+	@extend %CustomVars_Group_31 !optional;
+}
+
+
+%BaseGroup_21 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group_21 {
+}
+
+.Group_21 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup_21"
+	);
+	@extend %CustomVars_Group_21 !optional;
+}
+
+
+%BaseLouvre_Directions {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	background-color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Louvre_Directions {
+}
+
+.Louvre_Directions {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseLouvre_Directions"
+	);
+	@extend %CustomVars_Louvre_Directions !optional;
+}
+
+
+%BaseSections {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Sections {
+}
+
+.Sections {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseSections"
+	);
+	@extend %CustomVars_Sections !optional;
+}
+
+%BaseSectionsMargin_10_18_0_0 {
+	@extend %BaseSections !optional;
+	margin-bottom: 0px;
+
+
+	margin-left: 18px;
+
+
+	margin-right: 0px;
+
+
+	margin-top: 10px;
+
+
+
+}
+
+%CustomVars_SectionsMargin_10_18_0_0 {
+}
+
+.SectionsMargin_10_18_0_0 {
+	@extend %CustomVars_Sections !optional;
+	@include gx-table( 
+		$class: "%BaseSectionsMargin_10_18_0_0"
+	);
+	@extend %CustomVars_SectionsMargin_10_18_0_0 !optional;
+}
+
+
+
+%BaseRectangle {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 0px;
+
+
+	border-top-right-radius: 0px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #E21710;
+
+
+
+}
+
+%CustomVars_Rectangle {
+}
+
+.Rectangle {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseRectangle"
+	);
+	@extend %CustomVars_Rectangle !optional;
+}
+
+
+%BaseDirections_data {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Directions_data {
+}
+
+.Directions_data {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseDirections_data"
+	);
+	@extend %CustomVars_Directions_data !optional;
+}
+
+
+%BaseHeader_Copy {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Header_Copy {
+}
+
+.Header_Copy {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseHeader_Copy"
+	);
+	@extend %CustomVars_Header_Copy !optional;
+}
+
+%BaseHeader_CopyMargin_0_0_11_0 {
+	@extend %BaseHeader_Copy !optional;
+	margin-bottom: 11px;
+
+
+	margin-left: 0px;
+
+
+	margin-right: 0px;
+
+
+	margin-top: 0px;
+
+
+
+}
+
+%CustomVars_Header_CopyMargin_0_0_11_0 {
+}
+
+.Header_CopyMargin_0_0_11_0 {
+	@extend %CustomVars_Header_Copy !optional;
+	@include gx-table( 
+		$class: "%BaseHeader_CopyMargin_0_0_11_0"
+	);
+	@extend %CustomVars_Header_CopyMargin_0_0_11_0 !optional;
+}
+
+
+
+%BaseGroup_32 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Group_32 {
+}
+
+.Group_32 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup_32"
+	);
+	@extend %CustomVars_Group_32 !optional;
+}
+
+
+%BaseBackground {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Background {
+}
+
+.Background {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseBackground"
+	);
+	@extend %CustomVars_Background !optional;
+}
+
+
+%BaseBack_and_search {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Back_and_search {
+}
+
+.Back_and_search {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseBack_and_search"
+	);
+	@extend %CustomVars_Back_and_search !optional;
+}
+
+
+%BaseLouvre_About {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	background-color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Louvre_About {
+}
+
+.Louvre_About {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseLouvre_About"
+	);
+	@extend %CustomVars_Louvre_About !optional;
+}
+
+
+%BaseGroup2 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group2 {
+}
+
+.Group2 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup2"
+	);
+	@extend %CustomVars_Group2 !optional;
+}
+
+%BaseGroup2Margin_23_30_122_30 {
+	@extend %BaseGroup2 !optional;
+	margin-bottom: 122px;
+
+
+	margin-left: 30px;
+
+
+	margin-right: 30px;
+
+
+	margin-top: 23px;
+
+
+
+}
+
+%CustomVars_Group2Margin_23_30_122_30 {
+}
+
+.Group2Margin_23_30_122_30 {
+	@extend %CustomVars_Group2 !optional;
+	@include gx-table( 
+		$class: "%BaseGroup2Margin_23_30_122_30"
+	);
+	@extend %CustomVars_Group2Margin_23_30_122_30 !optional;
+}
+
+
+
+%BaseSections1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Sections1 {
+}
+
+.Sections1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseSections1"
+	);
+	@extend %CustomVars_Sections1 !optional;
+}
+
+%BaseSections1Margin_10_18_0_0 {
+	@extend %BaseSections1 !optional;
+	margin-bottom: 0px;
+
+
+	margin-left: 18px;
+
+
+	margin-right: 0px;
+
+
+	margin-top: 10px;
+
+
+
+}
+
+%CustomVars_Sections1Margin_10_18_0_0 {
+}
+
+.Sections1Margin_10_18_0_0 {
+	@extend %CustomVars_Sections1 !optional;
+	@include gx-table( 
+		$class: "%BaseSections1Margin_10_18_0_0"
+	);
+	@extend %CustomVars_Sections1Margin_10_18_0_0 !optional;
+}
+
+
+
+%BaseRectangle1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 0px;
+
+
+	border-top-right-radius: 0px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #E21710;
+
+
+
+}
+
+%CustomVars_Rectangle1 {
+}
+
+.Rectangle1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseRectangle1"
+	);
+	@extend %CustomVars_Rectangle1 !optional;
+}
+
+
+%BaseHeader {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Header {
+}
+
+.Header {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseHeader"
+	);
+	@extend %CustomVars_Header !optional;
+}
+
+
+%BaseGroup_33 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Group_33 {
+}
+
+.Group_33 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup_33"
+	);
+	@extend %CustomVars_Group_33 !optional;
+}
+
+
+%BaseBackground1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Background1 {
+}
+
+.Background1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseBackground1"
+	);
+	@extend %CustomVars_Background1 !optional;
+}
+
+
+%BaseBack_and_search1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Back_and_search1 {
+}
+
+.Back_and_search1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseBack_and_search1"
+	);
+	@extend %CustomVars_Back_and_search1 !optional;
+}
+
+
+%BaseAttractions {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	background-color: #FFFFFF;
+
+
+
+}
+
+%CustomVars_Attractions {
+}
+
+.Attractions {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseAttractions"
+	);
+	@extend %CustomVars_Attractions !optional;
+}
+
+%BaseAttractionsMargin_7_0_36_0 {
+	@extend %BaseAttractions !optional;
+
+}
+
+%CustomVars_AttractionsMargin_7_0_36_0 {
+}
+
+.AttractionsMargin_7_0_36_0 {
+	@extend %CustomVars_Attractions !optional;
+	@include gx-table( 
+		$class: "%BaseAttractionsMargin_7_0_36_0"
+	);
+	@extend %CustomVars_AttractionsMargin_7_0_36_0 !optional;
+}
+
+
+
+%BaseFooter {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Footer {
+}
+
+.Footer {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseFooter"
+	);
+	@extend %CustomVars_Footer !optional;
+}
+
+%BaseFooterMargin_19_30_46_19 {
+	@extend %BaseFooter !optional;
+	margin-bottom: 46px;
+
+
+	margin-left: 30px;
+
+
+	margin-right: 19px;
+
+
+	margin-top: 19px;
+
+
+
+}
+
+%CustomVars_FooterMargin_19_30_46_19 {
+}
+
+.FooterMargin_19_30_46_19 {
+	@extend %CustomVars_Footer !optional;
+	@include gx-table( 
+		$class: "%BaseFooterMargin_19_30_46_19"
+	);
+	@extend %CustomVars_FooterMargin_19_30_46_19 !optional;
+}
+
+
+
+%BasePopular_attractions_title {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Popular_attractions_title {
+}
+
+.Popular_attractions_title {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BasePopular_attractions_title"
+	);
+	@extend %CustomVars_Popular_attractions_title !optional;
+}
+
+
+%BaseSections2 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Sections2 {
+}
+
+.Sections2 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseSections2"
+	);
+	@extend %CustomVars_Sections2 !optional;
+}
+
+%BaseSections2Margin_15_0_0_0 {
+	@extend %BaseSections2 !optional;
+	margin-bottom: 0px;
+
+
+	margin-left: 0px;
+
+
+	margin-right: 0px;
+
+
+	margin-top: 15px;
+
+
+
+}
+
+%CustomVars_Sections2Margin_15_0_0_0 {
+}
+
+.Sections2Margin_15_0_0_0 {
+	@extend %CustomVars_Sections2 !optional;
+	@include gx-table( 
+		$class: "%BaseSections2Margin_15_0_0_0"
+	);
+	@extend %CustomVars_Sections2Margin_15_0_0_0 !optional;
+}
+
+
+
+%BaseAttractions1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Attractions1 {
+}
+
+.Attractions1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseAttractions1"
+	);
+	@extend %CustomVars_Attractions1 !optional;
+}
+
+
+%BaseLine2 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 0px;
+
+
+	border-top-right-radius: 0px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #E21710;
+
+
+
+}
+
+%CustomVars_Line2 {
+}
+
+.Line2 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseLine2"
+	);
+	@extend %CustomVars_Line2 !optional;
+}
+
+
+%BasePackages {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Packages {
+}
+
+.Packages {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BasePackages"
+	);
+	@extend %CustomVars_Packages !optional;
+}
+
+%BasePackagesMargin_7_0_36_0 {
+	@extend %BasePackages !optional;
+
+}
+
+%CustomVars_PackagesMargin_7_0_36_0 {
+}
+
+.PackagesMargin_7_0_36_0 {
+	@extend %CustomVars_Packages !optional;
+	@include gx-table( 
+		$class: "%BasePackagesMargin_7_0_36_0"
+	);
+	@extend %CustomVars_PackagesMargin_7_0_36_0 !optional;
+}
+
+
+
+%BaseTrips {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Trips {
+}
+
+.Trips {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseTrips"
+	);
+	@extend %CustomVars_Trips !optional;
+}
+
+%BaseTripsMargin_7_0_36_0 {
+	@extend %BaseTrips !optional;
+
+}
+
+%CustomVars_TripsMargin_7_0_36_0 {
+}
+
+.TripsMargin_7_0_36_0 {
+	@extend %CustomVars_Trips !optional;
+	@include gx-table( 
+		$class: "%BaseTripsMargin_7_0_36_0"
+	);
+	@extend %CustomVars_TripsMargin_7_0_36_0 !optional;
+}
+
+
+
+%BaseCruises {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Cruises {
+}
+
+.Cruises {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseCruises"
+	);
+	@extend %CustomVars_Cruises !optional;
+}
+
+%BaseCruisesMargin_7_0_36_0 {
+	@extend %BaseCruises !optional;
+
+}
+
+%CustomVars_CruisesMargin_7_0_36_0 {
+}
+
+.CruisesMargin_7_0_36_0 {
+	@extend %CustomVars_Cruises !optional;
+	@include gx-table( 
+		$class: "%BaseCruisesMargin_7_0_36_0"
+	);
+	@extend %CustomVars_CruisesMargin_7_0_36_0 !optional;
+}
+
+
+
+%BaseHeader1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Header1 {
+}
+
+.Header1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseHeader1"
+	);
+	@extend %CustomVars_Header1 !optional;
+}
+
+%BaseHeader1Margin_28_30_24_22 {
+	@extend %BaseHeader1 !optional;
+	margin-bottom: 24px;
+
+
+	margin-left: 30px;
+
+
+	margin-right: 22px;
+
+
+	margin-top: 28px;
+
+
+
+}
+
+%CustomVars_Header1Margin_28_30_24_22 {
+}
+
+.Header1Margin_28_30_24_22 {
+	@extend %CustomVars_Header1 !optional;
+	@include gx-table( 
+		$class: "%BaseHeader1Margin_28_30_24_22"
+	);
+	@extend %CustomVars_Header1Margin_28_30_24_22 !optional;
+}
+
+
+
+%BaseHome {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 0px;
+
+
+	border-top-right-radius: 0px;
+
+
+	border-bottom-left-radius: 0px;
+
+
+	border-bottom-right-radius: 0px;
+
+
+	background-color: #D7D7D7;
+
+
+
+}
+
+%CustomVars_Home {
+}
+
+.Home {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseHome"
+	);
+	@extend %CustomVars_Home !optional;
+}
+
+
+%BaseSearch {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 22px;
+
+
+	border-top-right-radius: 22px;
+
+
+	border-bottom-left-radius: 22px;
+
+
+	border-bottom-right-radius: 22px;
+
+
+	background-color: #0000003F;
+
+
+
+}
+
+%CustomVars_Search {
+}
+
+.Search {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseSearch"
+	);
+	@extend %CustomVars_Search !optional;
+}
+
+
+%BaseBackground2 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 22px;
+
+
+	border-top-right-radius: 22px;
+
+
+	border-bottom-left-radius: 22px;
+
+
+	border-bottom-right-radius: 22px;
+
+
+	background-color: #0000003F;
+
+
+
+}
+
+%CustomVars_Background2 {
+}
+
+.Background2 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseBackground2"
+	);
+	@extend %CustomVars_Background2 !optional;
+}
+
+
+%BaseMenu1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Menu1 {
+}
+
+.Menu1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseMenu1"
+	);
+	@extend %CustomVars_Menu1 !optional;
+}
+
+
+%BaseGroup_34 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group_34 {
+}
+
+.Group_34 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup_34"
+	);
+	@extend %CustomVars_Group_34 !optional;
+}
+
+
+%BaseAttractions2 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 20px;
+
+
+	border-bottom-right-radius: 20px;
+
+
+	background-color: #E21710;
+
+
+
+}
+
+%CustomVars_Attractions2 {
+--elevation: 4;
+
+}
+
+.Attractions2 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseAttractions2"
+	);
+	@extend %CustomVars_Attractions2 !optional;
+}
+
+
+%BasePackages1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 20px;
+
+
+	border-bottom-right-radius: 20px;
+
+
+	background-color: #E21710;
+
+
+
+}
+
+%CustomVars_Packages1 {
+--elevation: 4;
+
+}
+
+.Packages1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BasePackages1"
+	);
+	@extend %CustomVars_Packages1 !optional;
+}
+
+
+%BaseGroup3 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+
+}
+
+%CustomVars_Group3 {
+}
+
+.Group3 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseGroup3"
+	);
+	@extend %CustomVars_Group3 !optional;
+}
+
+
+%BaseFlights {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 20px;
+
+
+	border-bottom-right-radius: 20px;
+
+
+	background-color: #E21710;
+
+
+
+}
+
+%CustomVars_Flights {
+--elevation: 4;
+
+}
+
+.Flights {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseFlights"
+	);
+	@extend %CustomVars_Flights !optional;
+}
+
+
+%BaseCruises1 {
+	@extend %BaseSketchTable !optional;
+	border-style: solid;
+
+
+	border-width: 0px;
+
+
+	border-top-left-radius: 20px;
+
+
+	border-top-right-radius: 20px;
+
+
+	border-bottom-left-radius: 20px;
+
+
+	border-bottom-right-radius: 20px;
+
+
+	background-color: #E21710;
+
+
+
+}
+
+%CustomVars_Cruises1 {
+--elevation: 4;
+
+}
+
+.Cruises1 {
+	@extend %CustomVars_SketchTable !optional;
+	@include gx-table( 
+		$class: "%BaseCruises1"
+	);
+	@extend %CustomVars_Cruises1 !optional;
+}
+
+
+
+
+%BaseTextBlock {
+}
+
+%CustomVars_TextBlock {
+}
+
+.TextBlock {
+	@include gx-textblock( 
+		$class: "%BaseTextBlock"
+	);
+	@extend %CustomVars_TextBlock !optional;
+}
+
+%BaseTextBlockTitle {
+	@extend %BaseTextBlock !optional;
+
+}
+
+%CustomVars_TextBlockTitle {
+}
+
+.TextBlockTitle {
+	@extend %CustomVars_TextBlock !optional;
+	@include gx-textblock( 
+		$class: "%BaseTextBlockTitle"
+	);
+	@extend %CustomVars_TextBlockTitle !optional;
+}
+
+
+%BaseTextBlockSubtitle {
+	@extend %BaseTextBlock !optional;
+
+}
+
+%CustomVars_TextBlockSubtitle {
+}
+
+.TextBlockSubtitle {
+	@extend %CustomVars_TextBlock !optional;
+	@include gx-textblock( 
+		$class: "%BaseTextBlockSubtitle"
+	);
+	@extend %CustomVars_TextBlockSubtitle !optional;
+}
+
+
+%BaseImageLabelClass {
+	@extend %BaseTextBlock !optional;
+
+}
+
+%CustomVars_ImageLabelClass {
+}
+
+.ImageLabelClass {
+	@extend %CustomVars_TextBlock !optional;
+	@include gx-textblock( 
+		$class: "%BaseImageLabelClass"
+	);
+	@extend %CustomVars_ImageLabelClass !optional;
+}
+
+%BaseViewImageLabelClass {
+	@extend %BaseImageLabelClass !optional;
+
+}
+
+%CustomVars_ViewImageLabelClass {
+}
+
+.ViewImageLabelClass {
+	@extend %CustomVars_ImageLabelClass !optional;
+	@include gx-textblock( 
+		$class: "%BaseViewImageLabelClass"
+	);
+	@extend %CustomVars_ViewImageLabelClass !optional;
+}
+
+
+
+%BaseTextBlockSlider {
+	@extend %BaseTextBlock !optional;
+
+}
+
+%CustomVars_TextBlockSlider {
+}
+
+.TextBlockSlider {
+	@extend %CustomVars_TextBlock !optional;
+	@include gx-textblock( 
+		$class: "%BaseTextBlockSlider"
+	);
+	@extend %CustomVars_TextBlockSlider !optional;
+}
+
+
+%BaseAttributeLabel {
+	@extend %BaseTextBlock !optional;
+
+}
+
+%CustomVars_AttributeLabel {
+}
+
+.AttributeLabel {
+	@extend %CustomVars_TextBlock !optional;
+	@include gx-textblock( 
+		$class: "%BaseAttributeLabel"
+	);
+	@extend %CustomVars_AttributeLabel !optional;
+}
+
+
+%BaseCalendarLabel {
+	@extend %BaseTextBlock !optional;
+	font-size: 34px;
+
+
+
+}
+
+%CustomVars_CalendarLabel {
+}
+
+.CalendarLabel {
+	@extend %CustomVars_TextBlock !optional;
+	@include gx-textblock( 
+		$class: "%BaseCalendarLabel"
+	);
+	@extend %CustomVars_CalendarLabel !optional;
+}
+
+
+%BaseSketchTextBlock {
+	@extend %BaseTextBlock !optional;
+	color: #000000;
+
+
+
+}
+
+%CustomVars_SketchTextBlock {
+}
+
+.SketchTextBlock {
+	@extend %CustomVars_TextBlock !optional;
+	@include gx-textblock( 
+		$class: "%BaseSketchTextBlock"
+	);
+	@extend %CustomVars_SketchTextBlock !optional;
+}
+
+
+
+%BaseAudioController {
+}
+
+%CustomVars_AudioController {
+}
+
+.AudioController {
+	// No mixin available for this class at the moment
+	@extend %BaseAudioController !optional;
+
+	@extend %CustomVars_AudioController !optional;
+}
+
+
+%BaseMatrix {
+	show-horizontal-rules: True;
+
+
+	show-vertical-rules: True;
+
+
+	background-size: 100% 100%;
+
+
+
+}
+
+%CustomVars_Matrix {
+}
+
+.Matrix {
+	// No mixin available for this class at the moment
+	@extend %BaseMatrix !optional;
+
+	@extend %CustomVars_Matrix !optional;
+}
+
+
+%BaseMatrixAxisLabel {
+}
+
+%CustomVars_MatrixAxisLabel {
+}
+
+.MatrixAxisLabel {
+	// No mixin available for this class at the moment
+	@extend %BaseMatrixAxisLabel !optional;
+
+	@extend %CustomVars_MatrixAxisLabel !optional;
+}
+
+
+%BaseRating {
+}
+
+%CustomVars_Rating {
+}
+
+.Rating {
+	// No mixin available for this class at the moment
+	@extend %BaseRating !optional;
+
+	@extend %CustomVars_Rating !optional;
+}
+
+
+%BaseCalendar {
+	background-size: 100% 100%;
+
+
+	sdmotion-max-horizontal: 0;
+
+
+	sdmotion-max-vertical: 0;
+
+
+
+}
+
+%CustomVars_Calendar {
+}
+
+.Calendar {
+	// No mixin available for this class at the moment
+	@extend %BaseCalendar !optional;
+
+	@extend %CustomVars_Calendar !optional;
+}
+
+
+%BasePageController {
+}
+
+%CustomVars_PageController {
+}
+
+.PageController {
+	// No mixin available for this class at the moment
+	@extend %BasePageController !optional;
+
+	@extend %CustomVars_PageController !optional;
+}
+
+
+%BaseSlider {
+}
+
+%CustomVars_Slider {
+}
+
+.Slider {
+	// No mixin available for this class at the moment
+	@extend %BaseSlider !optional;
+
+	@extend %CustomVars_Slider !optional;
+}
+
+
+%BaseMapPinImage {
+}
+
+%CustomVars_MapPinImage {
+}
+
+.MapPinImage {
+	// No mixin available for this class at the moment
+	@extend %BaseMapPinImage !optional;
+
+	@extend %CustomVars_MapPinImage !optional;
+}
+
+
+%BaseMapRoute {
+}
+
+%CustomVars_MapRoute {
+}
+
+.MapRoute {
+	// No mixin available for this class at the moment
+	@extend %BaseMapRoute !optional;
+
+	@extend %CustomVars_MapRoute !optional;
+}
+
+
+%BaseMapPolygon {
+}
+
+%CustomVars_MapPolygon {
+}
+
+.MapPolygon {
+	// No mixin available for this class at the moment
+	@extend %BaseMapPolygon !optional;
+
+	@extend %CustomVars_MapPolygon !optional;
+}
+
+
+
+.section > main > gx-card > div > div > gx-table {
+	height: auto;
+}
+
+.section > main > gx-card > div > .card-header {
+	border-spacing: 10px;
+	background-color: rgba(0,0,0,.02);
+}
+
+.section {
+	margin-bottom: 30px;
+}
+
+/* Horizontal grid items must fill its given area */
+.gx-horizontal-grid-item {
+	width:100%;
+	height:100%;
+	& > div {
+		width:100%;
+		height:100%;
+	}
+}
+
+/* Fix horizontal grid elements sizing (AGS version) 
+If this rule is not specified, grid elements in horizontal 
+grids won't grow, and would depend on container size. This 
+won't work if container size depends on contained items size*/
+.gx-horizontal-grid-item .image-viewer {
+	min-width: 100%;
+	min-height: 100%;
+}
+ 

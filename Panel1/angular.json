@@ -1,0 +1,128 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "53172c52-0083-4221-9be7-acf73d9e4cc4"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "genexus-web-application": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "aot": true,
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "polyfills": "src/polyfills.ts",
+            "assets": [
+              "src/sass",
+              "src/images",
+              "src/translations",
+              "src/manifest.webmanifest",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@genexus/web-controls-library/dist/gx-web-controls/assets",
+                "output": "/assets/"
+              }
+            ],
+            "styles": [
+              {"input": "src/sass/travel_agency_app_mobile_3_.scss", "inject": false, "bundleName": "travel_agency_app_mobile_3_"},
+              {"input": "src/sass/travel_agency_app_mobile.scss", "inject": true, "bundleName": "travel_agency_app_mobile"}
+            ],
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "class-transformer"
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
+          },
+          "configurations": {
+            "production": {
+                "budgets": [
+                  {
+                    "type": "anyComponentStyle",
+                    "maximumWarning": "6kb"
+                  }
+                ],
+                "fileReplacements": [
+                    {
+                        "replace": "src/environments/environment.ts",
+                        "with": "src/environments/environment.prod.ts"
+                    }
+                ],
+                "optimization": true,
+                "outputHashing": "all",
+                "sourceMap": false,
+                "namedChunks": false,
+                "aot": true,
+                "extractLicenses": true,
+                "vendorChunk": false,
+                "buildOptimizer": true,
+                "serviceWorker": true,
+                "ngswConfigPath": "ngsw-config.json"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json",
+            "browserTarget": "genexus-web-application:build"
+          },
+          "configurations": {
+            "prod": {
+              "browserTarget": "genexus-web-application:build:prod"
+            },
+            "production": {
+              "browserTarget": "genexus-web-application:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "genexus-web-application:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "genexus-web-application-e2e": {
+      "root": "e2e",
+      "sourceRoot": "e2e",
+      "projectType": "application"
+    }
+  },
+  "defaultProject": "genexus-web-application",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "style": "scss"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
+}

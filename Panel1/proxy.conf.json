@@ -1,0 +1,10 @@
+{
+    "/TravelAgencyAngular.NetEnvironment": {
+        "target": "http://SDEPENA_LENOVO/TravelAgencyAngular.NetEnvironment/",
+        "secure": false,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/TravelAgencyAngular.NetEnvironment": ""
+        }
+    }
+}

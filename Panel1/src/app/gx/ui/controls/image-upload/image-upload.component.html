@@ -1,0 +1,38 @@
+<div class="click-capture" (click)="$event.stopPropagation()">
+	<div class="image-viewer">
+		<gx-image class="image-viewer-image"
+				  [src]="src"
+				  [alt]="alt"
+				  [disabled]="disabled"
+				  (click)="clickImageAction($event)">
+		</gx-image>
+		<div class="button-edit-container">
+			<button ngClass="image-edit"
+					*ngIf="!readonly && !uploading"
+					[disabled]="disabled"
+					(click)="triggerAction()">
+				<img src="images/multimediaedit.png" />
+			</button>
+			<img ngClass="image-uploading" src="images/loading.gif" *ngIf="uploading" />
+		</div>
+	</div>
+	<gx-modal [opened]="show" (onClose)="closeAction()" class="action-dialog">
+		<div slot="header">{{ modalTitle }}</div>
+		<div slot="body" style="display:flex; justify-content: space-around;">
+			<label class="select-file">
+				<span>{{'Change image' | translate}}</span>
+				<input #fileInput
+					   type="file"
+					   (change)="fileSelectedAction(); closeAction()" />
+			</label>
+			<gx-button (click)="clearImageAction(); closeAction()" class="Button">
+				{{'Remove image' | translate}}
+			</gx-button>
+		</div>
+		<div slot="secondary-action">
+			<gx-button (click)="closeAction()" class="Button">
+				{{'GXM_cancel' | translate}}
+			</gx-button>
+		</div>
+	</gx-modal>
+</div>

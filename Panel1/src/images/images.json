@@ -1,0 +1,313 @@
+{
+  "images": [
+    { 
+          "name": "group", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Group.png"
+    },
+    { 
+          "name": "location_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Location_icon.png"
+    },
+    { 
+          "name": "star_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Star_icon.png"
+    },
+    { 
+          "name": "b758c85e15b92a6d28f1c65ed1202d59cc48cb54", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/b758c85e15b92a6d28f1c65ed1202d59cc48cb54.png"
+    },
+    { 
+          "name": "location_white_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Location_white_icon.png"
+    },
+    { 
+          "name": "chatbot", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Chatbot.png"
+    },
+    { 
+          "name": "search_icon_grey", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Search_Icon_Grey.png"
+    },
+    { 
+          "name": "arrow", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Arrow.png"
+    },
+    { 
+          "name": "attractions_grey_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Attractions_grey_icon.png"
+    },
+    { 
+          "name": "attractions_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Attractions_icon.png"
+    },
+    { 
+          "name": "back_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Back_icon.png"
+    },
+    { 
+          "name": "cruises_grey_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Cruises_grey_icon.png"
+    },
+    { 
+          "name": "img164d94a2a2a01b72efa9a8a9e5ecaf8fc4bb8f20", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Img164d94a2a2a01b72efa9a8a9e5ecaf8fc4bb8f20.png"
+    },
+    { 
+          "name": "img3b14f83f0442ff949777ad8d262e1f20a4af3cf2", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Img3b14f83f0442ff949777ad8d262e1f20a4af3cf2.png"
+    },
+    { 
+          "name": "img4e3d87635acfb01d500f3ce20f8733d249494b3c", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Img4e3d87635acfb01d500f3ce20f8733d249494b3c.png"
+    },
+    { 
+          "name": "logo", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Logo.png"
+    },
+    { 
+          "name": "package_grey_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Package_grey_icon.png"
+    },
+    { 
+          "name": "packages_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Packages_icon.png"
+    },
+    { 
+          "name": "search_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Search_icon.png"
+    },
+    { 
+          "name": "ship_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Ship_icon.png"
+    },
+    { 
+          "name": "trips_grey_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Trips_grey_icon.png"
+    },
+    { 
+          "name": "flights_icon", 
+          "theme": "travel_agency_app_mobile_3_", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Flights_icon.png"
+    },
+    { 
+          "name": "group", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Group.png"
+    },
+    { 
+          "name": "location_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Location_icon.png"
+    },
+    { 
+          "name": "star_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Star_icon.png"
+    },
+    { 
+          "name": "b758c85e15b92a6d28f1c65ed1202d59cc48cb54", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/b758c85e15b92a6d28f1c65ed1202d59cc48cb54.png"
+    },
+    { 
+          "name": "location_white_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Location_white_icon.png"
+    },
+    { 
+          "name": "chatbot", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Chatbot.png"
+    },
+    { 
+          "name": "search_icon_grey", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Search_Icon_Grey.png"
+    },
+    { 
+          "name": "arrow", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Arrow.png"
+    },
+    { 
+          "name": "attractions_grey_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Attractions_grey_icon.png"
+    },
+    { 
+          "name": "attractions_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Attractions_icon.png"
+    },
+    { 
+          "name": "back_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Back_icon.png"
+    },
+    { 
+          "name": "cruises_grey_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Cruises_grey_icon.png"
+    },
+    { 
+          "name": "img164d94a2a2a01b72efa9a8a9e5ecaf8fc4bb8f20", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Img164d94a2a2a01b72efa9a8a9e5ecaf8fc4bb8f20.png"
+    },
+    { 
+          "name": "img3b14f83f0442ff949777ad8d262e1f20a4af3cf2", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Img3b14f83f0442ff949777ad8d262e1f20a4af3cf2.png"
+    },
+    { 
+          "name": "img4e3d87635acfb01d500f3ce20f8733d249494b3c", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Img4e3d87635acfb01d500f3ce20f8733d249494b3c.png"
+    },
+    { 
+          "name": "logo", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Logo.png"
+    },
+    { 
+          "name": "package_grey_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Package_grey_icon.png"
+    },
+    { 
+          "name": "packages_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Packages_icon.png"
+    },
+    { 
+          "name": "search_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Search_icon.png"
+    },
+    { 
+          "name": "ship_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Ship_icon.png"
+    },
+    { 
+          "name": "trips_grey_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Trips_grey_icon.png"
+    },
+    { 
+          "name": "flights_icon", 
+          "theme": "travel_agency_app_mobile", 
+          "lang": "English", 
+          "density": [], 
+          "location": "Resources/Flights_icon.png"
+    }
+  ]
+}
+

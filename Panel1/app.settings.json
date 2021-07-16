@@ -1,0 +1,103 @@
+{
+  "SERVICE_DEBUG": true,
+  "SERVICE_HOSTNAME": "TravelAgencyAngular.NetEnvironment/",
+  "SERVICE_BASE_PATH": "",
+  "SERVICE_REST_PATH": "rest/",
+  "SERVICE_OAUTH_PATH": "oauth/",
+
+  "WEB_RELATIVE_PATH": "servlet/",
+  "WEB_MAIN_OBJECT": "com.kbgenng.dashboard",
+
+  "GAM_CLIENT_ID": "",
+  "GAM_CLIENT_SECRET": "",
+  "GAM_CLIENT_LOGIN": "",
+  "GAM_CLIENT_NOTAUTHORIZED": "",
+  "GAM_CLIENT_CHANGEPASSWORD": "",
+  "GAM_ANONYMOUS_USER": false,
+
+  "DEFAULT_LANGUAGE": "English",
+  "DEFAULT_APPBAR_UPDATE_DELAY": 300,
+  "DEFAULT_ISLOADING_UPDATE_DELAY": 300,
+
+  "APPLICATION_LAYOUTS": [
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 0,
+        "minLongestBound": 0,
+        "maxLongestBound": 599
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 0,
+        "minLongestBound": 600,
+        "maxLongestBound": 719
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 0,
+        "minLongestBound": 1200,
+        "maxLongestBound": 0
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 0,
+        "minLongestBound": 720,
+        "maxLongestBound": 1199
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 0,
+        "minLongestBound": 0,
+        "maxLongestBound": 0
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 0,
+        "minLongestBound": 0,
+        "maxLongestBound": 0
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 0,
+        "minLongestBound": 0,
+        "maxLongestBound": 0
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 720,
+        "maxShortestBound": 0,
+        "minLongestBound": 0,
+        "maxLongestBound": 0
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 600,
+        "maxShortestBound": 719,
+        "minLongestBound": 0,
+        "maxLongestBound": 0
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 599,
+        "minLongestBound": 0,
+        "maxLongestBound": 0
+    },
+    {
+        "navigationStyle": "default",
+        "minShortestBound": 0,
+        "maxShortestBound": 0,
+        "minLongestBound": 0,
+        "maxLongestBound": 0
+    }
+  ],
+
+  "DEFAULT_NAVIGATION_STYLE": "flip"
+}
